@@ -23,9 +23,8 @@ class AppText {
 
   // Login texts
 
-  static String loginTitle = AppLocalizations.of(Get.context!).login('Login');
-  static String loginEmail = AppLocalizations.of(Get.context!).login('Email');
-  static String loginPassword = AppLocalizations.of(Get.context!).login('Password');
-  static String loginSignIn = AppLocalizations.of(Get.context!).login('Sign in');
+  static String loginEmail = AppLocalizations.of(Get.context!).login('loginEmail');
+  static String loginPassword = AppLocalizations.of(Get.context!).login('loginPassword');
+  static String loginSignIn = AppLocalizations.of(Get.context!).login('loginSignIn');
 
 }

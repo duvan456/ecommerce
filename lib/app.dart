@@ -19,7 +19,12 @@ class App extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       // locale: const Locale('es', ''), // TODO: put here status management
-      locale: const Locale('en', ''),
+      locale: Get.locale
     );
   }
+
+  void changeLocale(Locale newLocale) {
+    Get.updateLocale(newLocale);
+    Get.forceAppUpdate();
+}
 }

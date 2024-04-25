@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  var selectedLanguage = 'Español'.obs; // Inicialmente, el idioma seleccionado es español
+  // Variable observable para controlar el estado del idioma
+  var currentLanguage = 'en'.obs; // Usamos .obs para crear una variable observable
 
-  void changeLanguage(String language) {
-    selectedLanguage.value = language;
-    // Aquí puedes agregar lógica para cambiar el idioma de tu aplicación
-    // Por ejemplo, puedes usar paquetes como flutter_localizations para cambiar el idioma de los textos
+  void changeLanguage() {
+    // Cambiar el idioma entre inglés y español
+    currentLanguage.value = (currentLanguage.value == 'en') ? 'es' : 'en';
+    print('Current Language: ${currentLanguage.value}');
   }
 }
